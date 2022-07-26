@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title> Atividade 3 - Formulário </title>
+    <meta charset="UTF-8">
+</head>
+
+    
+
+<body background="imagens/plano de fundo html.jpg">
+    
+    <hr size="10" color="Red">
+
+    <h1 align="center"> <font color="Black"> <strong> Inscrição de jogadores </strong> </font> </h1>
+
+    <hr size="5" color="Red">
+
+    <font color="White">
+    <table border="0" align="center" width="500" background="imagens/fundo br.jpg">
+        <form action="enviar.php" method="post" name="Cadastro">
+        <tr><td>
+
+         <fieldset>
+            <legend> Informações pessoais do jogador: </legend>
+         
+
+         <table border="0" cellpadding="5">
+
+            <tr>
+                <td> <label> Nome: </label> </td>
+                <td> <input type="text" id="nome" name="nome" size="50" placeholder="Informe o nome do jogador:" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label> Email: </label> </td>
+                <td> <input type="email" id="mail" name="mail" size="50" placeholder="Informe o email do jogador:" required/> </td>
+            </tr>
+
+            <tr>
+                <td> <label> Telefone: </label> </td>
+                <td> <input type="tel" id="telefone" name="telefone" size="50" placeholder="(XX)XXXXX-XXXX:" required/> </td> 
+             </tr>
+
+             <tr>
+                <td> <label> Data de Nascimento: </label> </td>
+                <td> <input type="date" name="data_nasc" id="data_nasc" min="1972-01-01" max="2008-01-01" required/> </td>
+             </tr>
+
+             <tr>
+                <td> <label> CPF: </label> </td>
+                <td> <input type="text" id="cpf" name="cpf" size="50" placeholder="XXX.XXX.XXX-XX" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label> RG: </label> </td>
+                <td> <input type="text" id="rg" name="rg" size="50" placeholder="XX.XXX.XXX-XX" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label> Anexe uma foto do RG: </label> </td>
+                <td> <input type="file" id="anexar" name="anexar" required/> </td>
+             </tr>
+
+            <tr>
+                <td> <label> Estado: </label> </td>       
+                    <td> <select id="estado" name="estado" required>
+                        <option value="" selected="selected" align="center">Selecione</option>
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="PA">Pará</option>
+                            <option value="TO">Tocantins</option>
+    
+                        </optgroup>
+    
+                        <optgroup label="Nordeste">
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            
+    
+    
+                        </optgroup>
+    
+                        <optgroup label="Sudeste">
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="ES">Espírito Santo</option>
+    
+    
+                        </optgroup>
+    
+                        <optgroup label="Centro-Oeste">
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+    
+                        
+                        </optgroup>
+    
+                        <optgroup label="Sul">
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="PR">Paraná</option>
+                        </optgroup>
+
+                        <option value="EX">Estrangeiro</option>
+                     </select>
+                    </td>
+
+                    <tr>
+                        <td> <label> Informe o estado civil: </label> </td>       
+                            <td> <select id="ec" name="ec" required>
+                                <option value="" selected="selected" align="center">Selecione</option>
+                            
+                                    <option value="Casado">Casado</option>
+                                    <option value="Solteiro">Solteiro</option>
+                                    <option value="Divorciado">Divorciado</option>
+                                    <option value="Viuvo">Viúvo</option>
+                                    <option value="Uniao Estavel">União Estável</option>
+                                    </select>
+                            </td>
+                         </tr>
+
+                    <tr>
+                        <td> <label> Nome do(a) empresário(a): </label> </td>
+                        <td> <input type="text" id="nomee" name="nomee" size="50" placeholder="Informe o nome do empresário do jogador:" required> </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> Patrocínios: </label> </td>
+                        <td> <input type="text" id="patrocinio" name="patrocinio" size="50" placeholder="Informe os patrocínios do jogador:"> </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> Complemento: </label> </td>
+                        <td> <textarea id="assunto" name="assunto" cols="50" rows="10" maxlength="240" placeholder="Espaço para complementar algo se desejar.(máximo de 240 caracteres)"></textarea>
+                        </td>
+                     </tr>
+        
+        </table>
+        </fieldset> 
+
+        <fieldset>
+            <legend> Informações de clube do jogador: </legend>
+
+         <table border="0" cellpadding="5">
+
+            <tr>
+                <td> <label> Clube Formador: </label> </td>
+                <td> <input type="text" id="cf" name="cf" size="50" placeholder="Informe o clube formador do jogador:"/> </td>
+            </tr>
+
+             <tr>
+                <td> <label> Informe a posição do jogador: </label> </td>       
+                    <td> <select id="posicao" name="posicao" required>
+                        <option value="" selected="selected" align="center">Selecione</option>
+                    
+                        <optgroup label="Goleiro">
+                            <option value="GL">Goleiro</option>
+                        </optgroup>
+    
+                        <optgroup label="Defensor">
+                            <option value="ZA">Zagueiro</option>
+                            <option value="LE">Lateral Esquerdo</option>
+                            <option value="LD">Lateral Direito</option>
+                            
+    
+    
+                        </optgroup>
+    
+                        <optgroup label="Meia">
+                            <option value="MC">Meia Central</option>
+                            <option value="ML">Meia De Ligação</option>
+                            <option value="VO">Volante</option>
+                            <option value="ME">Meia Esquerda</option>
+                            <option value="MD">Meia Direita</option>
+                            <option value="MA">Meia Atacante</option>
+                            <option value="VL">Segundo Volante</option>
+    
+                        </optgroup>
+    
+                        <optgroup label="Atacante">
+                            <option value="CA">Centro-Avante</option>
+                            <option value="SA">Segundo Atacante</option>
+                            <option value="PE">Ponta Esquerda</option>
+                            <option value="PD">Ponta Direita</option>
+    
+                        </optgroup>
+                     </select>
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td> <label> Informe o clube no qual o jogador será inscrito: </label> </td>       
+                        <td> <select id="clube" name="clube" required>
+                            <option value="" selected="selected" align="center">Selecione</option>
+                        
+                                <option value="AMG">América Mineiro</option>
+                                <option value="CAP">Athletico Paranaense</option>
+                                <option value="ACG">Atlético Goianiense</option>
+                                <option value="CAM">Atlético Mineiro</option>
+                                <option value="AFC">Avaí</option>
+                                <option value="BFR">Botafogo</option>
+                                <option value="CSC">Ceará</option>
+                                <option value="COR">Corinthians</option>
+                                <option value="CFC">Coritiba</option>
+                                <option value="CEC">Cuaibá</option>
+                                <option value="CRF">Flamengo</option>
+                                <option value="FFC">Fluminense</option>
+                                <option value="FEC">Fortaleza</option>
+                                <option value="GEC">Goiás</option>
+                                <option value="SPC">Internacional</option>
+                                <option value="ECJ">Juventude</option>
+                                <option value="SEP">Palmeiras</option>
+                                <option value="RBB">Red Bull Bragantino</option>
+                                <option value="SFC">Santos</option>
+                                <option value="SPFC">São Paulo</option>
+                         </select>
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td> <label> Informe número da camisa: </label> </td>
+                        <td> <input type="number" id="numero" name="numero" placeholder="Selecione o número:" required> </td>
+                    </tr>
+
+                     <tr>
+                        <td> <label> Salário: </label> </td>
+                        <td> <input type="text" id="cf" name="cf" size="50" placeholder="Informe o salário do jogador:" required/> </td>
+                    </tr>
+    
+                    <tr>
+                        <td> <label> Informe a duração do contrato: </label> </td>
+                        <td> <input type="number" id="exp" name="exp" placeholder="Selecione a duração:" required> </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> Informe a data de emissão do contrato: </label> </td>
+                        <td> <input type="datetime-local" id="emissao" name="emissao" placeholder="Selecione a emissão:" required> </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> Informe a data de expedição do contrato: </label> </td>
+                        <td> <input type="date" id="expedicao" name="expedicao" placeholder="Selecione a expedição:" required> </td>
+                    </tr>
+                     
+                     <tr>
+                        <td> <label> Informe a idade que o jogador começou a praticar o esporte: </label> </td>
+                        <td> <input type="number" id="exp" name="exp" placeholder="Selecione a idade:" required> </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> Informe a cor desejada na carteirinha: </label> </td>
+                        <td> <input type="color" id="cor" name="cor" placeholder="Selecione a cor:"> </td>
+                    </tr>
+
+                     <tr>
+                        <td> <label> Complemento: </label> </td>
+                        <td> <textarea id="assunto" name="assunto" cols="50" rows="10" maxlength="240" placeholder="Espaço para complementar algo se desejar.(máximo de 240 caracteres)"></textarea>
+                        </td>
+                     </tr>
+                     <tr> 
+                           <td align="left"><input type="submit" id="enviar" name="enviar" value="ENVIAR"/></td>
+                           <td align="right"><input type="reset" id="limpar" name="limpar" value="LIMPAR"/></td>
+                     </tr>
+
+        </table>
+        </fieldset>
+        </td></tr>
+      </form>  
+    </table>
+    </font>
+</body>
+</html>
